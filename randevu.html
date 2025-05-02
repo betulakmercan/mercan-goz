@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <title>Mercan Göz - Ana Sayfa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="script.js"></script> 
+    <section id="appointment" class="content-section">
+        <h2>Randevu Al</h2>
+        <div class="form-container">
+            <form id="randevuForm">
+                <input type="text" id="name" placeholder="Ad Soyad" required>
+                <input type="date" id="dob" placeholder="Doğum Tarihi" required>
+                <input type="text" id="no" placeholder="T.C Kimlik No" required>
+                <input type="tel" id="phone" placeholder="Telefon Numarası" required>
+                <select id="hour" name="hour" required>
+                    <option value="" disabled selected>Randevu Saati Seçiniz</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:00">16:00</option>
+                    <option value="15:00">17:00</option>
+                </select>
+                <select id="doctorId" name="doctor" required>
+                    <option value="" disabled selected>Doktor seçiniz</option>
+                    <option value="Dr. Elif Yılmaz">Uzm. Dr. Elif Yılmaz</option>
+                    <option value="Dr. Mehmet Derman">Dr. Öğr. Üyesi Mehmet Derman</option>
+                    <option value="Dr. Zeynep Akar">Op. Dr. Kerem Aslan</option>
+                    <option value="Dr. Lucas Reinhart">Dr. Lucas Reinhart</option>
+                    <option value="Doç. Dr. Zeynep Akar">Doç. Dr. Zeynep Akar</option>
+                    <option value="Prof. Dr. Ahmet Gürsoy">Prof. Dr. Ahmet Gürsoy</option>
+                </select>
+    
+                <button type="submit">Randevu Al</button>
+            </form>
+        </div>
+    </section>

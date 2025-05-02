@@ -1,0 +1,704 @@
+
+/* Giriş Sayfası Stili */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Sayfanın genişliğini sınırlar */
+  overflow-x: hidden; 
+}
+
+.welcome-page {
+  position: relative;
+  height: 100vh; /* Tam ekran yüksekliği */
+  background-image: url('images/backgr.jpg'); /* Arka plan resmi */
+  background-size: cover; /* Resmi tam ekran kaplar */
+  background-position: center; /* Resmi ortalar */
+  background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Yazı rengini beyaz yapar */
+}
+
+
+.welcome-link {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  background-color: #4da8da;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.welcome-link:hover {
+  background-color: #3b8bbd;
+  transform: scale(1.1);
+}
+
+/* Hoşgeldiniz Butonu */
+.scroll-button {
+  position: absolute; /* Konumlandırmayı serbest bırakır */
+  top: 45%; /* Sayfanın üstünden aşağıda */
+  left: 43%; /* Sayfanın solundan içeride */
+  display: inline-block;
+  padding: 15px 30px; /* Butonun iç boşlukları */
+  font-size: 1.5em; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: black; /* Yazı rengi */
+  background-color: rgba(173, 216, 230, 0.7); /* Açık mavi ve şeffaf arka plan */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  border-radius: 30px; /* Yuvarlak köşeler */
+  transition: all 0.3s ease; /* Hover efekti için geçiş */
+  cursor: pointer; /* İmleç değişimi */
+  border: none; /* Kenarlık kaldırılır */
+}
+
+.scroll-button:hover {
+  background-color: rgba(135, 206, 250, 0.9); /* Hover sırasında daha belirgin mavi */
+  transform: scale(1.1); /* Hover sırasında büyütme efekti */
+}
+
+.scroll-button .welcome-text {
+  text-transform: uppercase; /* Büyük harf */
+  text-decoration: none; /* Alt çizgi kaldırılır */
+}
+
+/* Ok İşareti Animasyonu */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+
+
+/* Ana Sayfa Stili */
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    margin-right: 100px;
+  }
+.logo img {
+    width: 40; /* sembol boyutu */
+    height: 40px;
+    margin-right:5px;
+
+  }
+  
+.brand-name {
+    font-size: 18px;
+    color:white;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5px;
+
+  }
+  .menu a:hover {
+    color: #00bcd4;
+  }
+
+
+.navbar {
+    background-color: #4da8da;
+    padding-top:5px;
+    position: fixed;
+    top:-30;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    margin-top: -10px; 
+    font-family: 'Arial', sans-serif;
+    height: 90px; /* Menünün yüksekliği sabit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+  
+  
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+    overflow-x: hidden;
+
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    overflow-x: hidden;
+    margin-top: -10px;
+
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+    overflow-x: hidden;
+    margin-top:-20px;
+
+}
+
+
+
+/*Tedavilerimiz */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f7ff; /* Açık mavi arka plan */
+  }
+  
+  .tedavilerimiz {
+    padding: 40px 20px;
+  }
+ 
+  .tedavilerimiz h2 {
+    color:black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .tedavi-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    align-items: flex-start;
+  }
+  
+  .tedavi-kart {
+    min-width: 300px;
+    max-width: 300px;
+    background-color: #4da8da;
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: auto; /* Otomatik olarak alta doğru uzasın */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .tedavi-kart:hover {
+    transform: scale(1.05);
+  }
+  
+  .tedavi-kart h3 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  .tedavi-kart p {
+    font-size: 15px;
+  }
+  
+  /* Scrollbar (isteğe bağlı) */
+  .tedavi-slider::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .tedavi-slider::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+
+
+/* Doktor Görselleri */
+  /* Ana grid: 3 sütun, 2 satır */
+
+/* Görsellerin düzenlenmesi */
+.doctor-images {
+  display: flex;
+  flex-wrap: wrap; /* Görsellerin birden fazla satıra sığmasını sağlar */
+  width: 100vw; /* Yatayda ekranı tamamen kaplar */
+  height: 100vh; /* Dikeyde ekranı tamamen kaplar */
+  margin: 0; /* Sağ ve sol boşlukları sıfırlar */
+  padding: 0; /* İç boşlukları sıfırlar */
+  gap:0;
+}
+
+.doctor-card {
+  flex: 1 0 33.33%;/* Doktor Görselleri */
+  margin: 0; /* Görseller arasındaki dış boşluğu sıfırlar */
+  padding: 0; 
+  overflow: hidden; /* Taşan içerikleri gizler */
+}
+
+.doctor-card img {
+  width: 100%; /* Görsellerin genişliği hücreyi tamamen kaplar */
+  height: 100%; /* Görsellerin yüksekliği hücreyi tamamen kaplar */
+  object-fit: cover; /* Görsellerin taşmasını önler ve düzgün bir şekilde sığdırır */
+  display: block; /* Görsellerin altındaki boşlukları kaldırır */
+}
+
+doctor-card button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #4da8da;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+/* Doktor Kartı Hover */
+.doctor-card:hover .doctor-image {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Görsel Üzerine Gelen Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    flex-direction: column;
+    border-radius: 0;
+}
+
+/* Hakkında Butonu */
+.about-btn {
+    background-color: #4da8da;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #4c91b6;
+}
+
+.doctor-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive - Küçük ekranlar için düzen */
+@media (max-width: 768px) {
+    .doctors {
+        grid-template-columns: repeat(2, 1fr); /* Ekran küçükse 2 sütun düzeni */
+    }
+}
+
+@media (max-width: 480px) {
+    .doctors {
+        grid-template-columns: 1fr; /* Daha küçük ekranlarda 1 sütun düzeni */
+    }
+}
+
+/*tedaviler hakkında sorular*/
+.tdv-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tdv-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+.tdv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tdv-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.tdv-question {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #4da8da;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tdv-question:hover {
+  background-color: #3b8bbd;
+}
+
+.tdv-answer {
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+  display: none; /* Başlangıçta gizli */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tdv-item.active .tdv-answer {
+  display: block; /* Aktif olduğunda göster */
+}
+
+
+/* İçerik Bölümü */
+.content-section {
+    padding: 40px;
+    text-align: center;
+    color:black
+}
+
+/* formlar */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 2000px; /* daha geniş alan verir */
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+  }
+  
+  .contact-info,
+  .calisma-info {
+    width: 48%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-info:hover,
+  .calisma-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h2,
+  .calisma-info h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #4da8da;
+    text-align: center;
+    text-align:left; /* başlığı sağa hizalar */
+  }
+  
+  .contact-info p,
+  .calisma-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info i,
+  .calisma-info i {
+    color: #4a90e2;
+    margin-right: 10px;
+  }
+  
+  .calisma-info p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    padding-left: 10px;
+    font-size: 16px;
+    border-bottom: 1px dashed #ddd; /* satır ayırıcı istersen */
+  }
+  
+  .calisma-info .gun {
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .calisma-info .saat {
+    text-align: right;
+    color: #555;
+    font-style: italic;
+  }
+  .calisma-info .saat-satiri {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    padding: 5px 10px;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+
+  /*pencere*/
+  .modal {
+    display: none; /* Varsayılan olarak gizli */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Şeffaf siyah arka plan */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  .modal.show {
+    display: flex; /* Görünür hale getir */
+    opacity: 1; /* Görünürlük */
+    visibility: visible; 
+}
+  
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.8); /* Siyah şeffaf arka plan */
+  color: white;
+  padding: 20px; /* Daha küçük bir padding */
+  border-radius: 10px;
+  width: 600px; /* Daha geniş bir modal */
+  text-align: justify; /* Paragrafları hizala */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: scale(0.9); /* Küçük başlat */
+  transition: transform 0.3s ease; /* Geçiş süresi ve türü */
+  margin: 10px auto; /* Ortalamak için */
+  line-height: 1.6; /* Satır yüksekliği */
+}
+
+.modal-content p {
+  margin: 10px 0; /* Paragraflar arasında boşluk */
+  line-height: 1.8; /* Daha okunabilir satır yüksekliği */
+}
+  .modal.show .modal-content {
+    transform: scale(1); /* Normal boyuta büyüt */
+}
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+
+/* Randevu Formu */
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color:black;
+}
+  
+.form-container form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="date"], input[type="tel"], select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color:black;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#4da8da;
+}
+
+.randevu-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.randevu-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.randevu-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.randevu-form input,
+.randevu-form select,
+.randevu-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.randevu-form button {
+  background-color: #4da8da;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.randevu-form button:hover {
+  background-color: #3b8bbd;
+}
+
+/*randevu takip*/
+.randevular {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.randevular h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.randevular ul {
+  list-style: none;
+  padding: 0;
+}
+
+.randevu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+#noAppointmentsMessage {
+  text-align: center;
+  color: #555;
+  font-style: italic;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+select:invalid {
+  color: gray;
+}
+
+select option {
+  color: black;
+}
+
+select option[disabled] {
+  color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
