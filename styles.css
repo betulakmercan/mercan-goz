@@ -407,7 +407,7 @@ doctor-card button {
     background-color: #ffffff;
     margin: 40px auto;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px black;
     max-width: 2000px; /* daha geniş alan verir */
     font-family: 'Segoe UI', sans-serif;
     color: black;
