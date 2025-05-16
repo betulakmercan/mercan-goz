@@ -9,15 +9,11 @@ from app.rresepsiyon import router as resepsiyon_router
 from app.rfilmcekim import router as filmcekim_router
 from app.rsonuc import router as sonuc_router
 
-
-# Veritabanı tabloları oluşturuluyor
 classs.Base.metadata.create_all(bind=database.engine)
 
-# FastAPI uygulaması oluşturuluyor
 app = FastAPI()
+app.include_router(resepsiyon_router)
 
-
-# Router'ları ekliyoruz
 app.include_router(doktor_router)
 app.include_router(randevu_router)
 app.include_router(filmcekim_router)

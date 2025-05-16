@@ -5,4 +5,3 @@ class RandevuOlustur(BaseModel):
     doktor_id: int
     randevu_tarihi: str
 
-# Başka şemalar da eklenebilir

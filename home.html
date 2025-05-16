@@ -1,4 +1,3 @@
-  
     <!DOCTYPE html>
     <html lang="tr">
     <head>
@@ -31,7 +30,6 @@
         <section id="doctors" ></section>
             <h2></h2>
             <div class="doctor">
-                <!-- Slick Carousel -->
                 <div class="doctor-images">
 
                     <div class="doctor-card">
@@ -110,8 +108,7 @@
             </section>
             <section id="doctors">
                 <h2></h2>
-                <div class="doctor">
-                    <!-- Slick Carousel -->
+                <div class="doctor"></div>
                     <div class="doctor-images">
 
 
@@ -384,7 +381,6 @@
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Slick Carousel Kütüphanesini Dahil Et -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -419,4 +415,421 @@
         });
       </script>
     </body>
-    </html>
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+        <title>Mercan Göz - Ana Sayfa</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="app/script.js"></script>
+    </head>
+    <body>
+  
+    
+         <nav class="navbar">
+            <div class="logo">
+                <img src="images/logoo.png" alt="Logo">
+                <span class="brand-name">Mercan Göz</span>
+              </div>
+            <ul>
+                <li><a href="#doctors">Doktorlarımız</a></li>
+                <li><a href="#contact">İletişim</a></li>
+                <li><a href="#tedavilerimiz">Tedavilerimiz</a></li>
+                <li><a href="randevu.html">Randevu</a></li>
+            </ul>
+        </nav>
+       
+    
+
+        <section id="doctors" ></section>
+            <h2></h2>
+            <div class="doctor">
+                <div class="doctor-images">
+
+                    <div class="doctor-card">
+                        <img src="images/d1.jpg" alt="Doctor 1" class="doctor-image">
+                        <div class="overlay">
+                        <h3>Uzm. Dr. Elif Yılmaz</h3>
+                           <button class="about-btn" onclick="openModal('modal1')">Hakkında</button>
+                        </div>
+                    </div>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+                          <h2>Uzm. Dr. Elif Yılmaz</h2>
+                          <p><em>Kornea Hastalıkları – Göz Estetiği – Katarakt Cerrahisi</em></p>
+                          
+                          <p>Uzman Dr. Elif Yılmaz, göz hastalıkları alanında özellikle <strong>kornea tedavileri</strong>, <strong>göz estetiği</strong> 
+                           ve <strong>katarakt cerrahisi</strong> konularında deneyimli bir hekimdir.</p>
+                          <p>Göz estetiği alanında minimal invaziv tekniklerle başarılı sonuçlar elde etmiştir.</p>
+                          <p>Kornea kaynaklı görme kusurlarının tedavisinde gelişmiş lazer teknolojileri kullanarak birçok hastaya net görüş kazandırmıştır.</p>
+                          
+                          <p>Hasta memnuniyetini esas alan yaklaşımıyla tanınan, aynı zamanda <strong>şaşılık cerrahisi</strong> 
+                           ve <strong>katarakt operasyonlarında</strong> da etkin rol almaktadır.</p>
+                          <p>Güncel bilimsel gelişmeleri yakından takip ederek tedavi protokollerini modern tıp teknolojileriyle entegre etmektedir.</p>
+                          <p>Hastanemizde genç ve dinamik hekim kadrosunun önemli bir parçası olarak görev yapmaktadır.</p>
+                        
+                        </div>
+                      </div>
+                 
+                      <div class="doctor-card">
+                        <img src="images/d2.jpg" alt="Dr. Öğr. Üyesi Mehmet Derman" class="doctor-image">
+                        <div class="overlay">
+                            <h3>Dr. Öğr. Üyesi Mehmet Derman</h3>
+                            <button class="about-btn" onclick="openModal('modal2')">Hakkında</button>
+                        </div>
+                    </div>
+                    
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+                            <h2>Dr. Öğr. Üyesi Mehmet Derman</h2>
+                            <p><em>Glokom – Katarakt Cerrahisi – Retina Hastalıkları</em></p>
+                            <p>Doç. Öğr. Üyesi Dr. Mehmet, özellikle <strong>glokom</strong> ve <strong>katarakt cerrahisi</strong> alanında derin klinik tecrübeye sahip, saygın bir akademisyendir.</p>
+                            <p>Glokom hastalarının tanı sürecinde gelişmiş görüntüleme teknikleri ve bireyselleştirilmiş tedavi planlaması uygulayarak, göz içi basınç kontrolünde yüksek başarı oranları yakalamaktadır.</p>
+                            <p>Akademik çalışmalarıyla retina hastalıkları konusunda da önemli katkılar sunmuştur.</p>
+                            <p>Multidisipliner yaklaşımı benimseyerek kronik göz hastalıklarının yönetiminde öncülük etmektedir.</p>
+                            <p>Hasta güvenliği, etik değerlere bağlılık ve bilimsel araştırmalara katkı sağlayan kimliğiyle hastanemizde hem klinik hem de akademik alanda hizmet vermektedir.</p>
+                        </div>
+                    </div>
+
+              
+                            <div class="doctor-card">
+                                <img src="images/d3.jpg" alt="" class="doctor-image">
+                                <div class="overlay">
+                                    <h3>Doç. Dr. Zeynep Akar</h3>
+                                    <button class="about-btn"onclick="openModal('modal3')">Hakkında
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="modal3" class="modal">
+                                <div class="modal-content">
+                                  <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+                                  <h2>Doç. Dr. Zeynep Akar</h2>
+                                  <p><em>Retina Hastalıkları – Glokom – Çocuk Göz Sağlığı</em></p>
+                                  
+                                  <p>Doç. Dr. Zeynep, retina ve glokom hastalıklarının tanı ve tedavisinde uzmanlaşmış, akademik çalışmalarıyla ulusal ve uluslararası platformlarda saygınlık kazanmış bir hekimdir.</p>
+                                  <p>Retina dekolmanı, diyabetik retinopati ve yaşa bağlı makula dejenerasyonu gibi retina hastalıklarında ileri düzey tanı-tedavi hizmeti sunmaktadır.</p>
+                                  
+                                  <p>Aynı zamanda <strong>çocuk göz sağlığı</strong> alanında da özel ilgi ve deneyime sahiptir.</p>
+                                  <p>Pediatrik oftalmoloji kapsamında şaşılık, kırma kusurları ve görme tembelliği gibi rahatsızlıkların erken tanısı ve tedavisi konusunda etkin çözümler üretmektedir.</p>
+                                  <p>Bilimsel yaklaşımı, hasta odaklı hizmet anlayışı ve öğretim üyeliği birikimiyle kliniğimize değer katmaktadır.</p>
+                                  
+                                 </div>
+                              </div>
+                </div>
+                </div>
+            </section>
+            <section id="doctors">
+                <h2></h2>
+                <div class="doctor">
+                    <div class="doctor-images">
+
+
+                        <div class="doctor-card">
+                            <img src="images/d4.jpg" alt="" class="doctor-image">
+                            <div class="overlay">
+                                <h3>Prof. Dr. Ahmet Gürsoy</h3>
+                                <button class="about-btn"onclick="openModal('modal4')">Hakkında</button>
+                            </div>
+                        </div>
+                        <div id="modal4" class="modal">
+                            <div class="modal-content">
+                              <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+                              <h2>Prof. Dr. Ahmet Gürsoy</h2>
+                              <p><em>Katarakt Cerrahisi – Retina – Glokom – Kornea Hastalıkları</em></p>
+                              
+                              <p>Prof. Dr. Ahmet, oftalmoloji alanında 30 yılı aşkın deneyimiyle hem ülkemizde hem uluslararası camiada saygı gören bir bilim insanıdır.</p>
+                              <p>Özellikle <strong>katarakt cerrahisi</strong>, <strong>retina hastalıkları</strong>, <strong>glokom</strong> ve <strong>kornea bozuklukları</strong> üzerine yürüttüğü çalışmalarla ön plana çıkmaktadır.</p>
+                              <p>Femtosaniye lazer teknolojileri ve multifokal lens uygulamaları ile katarakt tedavisinde mükemmel sonuçlara ulaşmıştır.</p>
+                              
+                              <p>Akademik yayınları, kongre sunumları ve yetiştirdiği öğrencilerle Türk göz hekimliğine önemli katkılarda bulunmuştur.</p>
+                              <p>İleri düzey cerrahi müdahalelerde referans isimlerden biridir.</p>
+                              <p>Hastanemizdeki görevinde hasta odaklı yaklaşımı ve bilimsel vizyonuyla mükemmeliyet anlayışını sürdürmektedir.</p>
+                              
+                            </div>
+                          </div>
+                            <div class="doctor-card">
+                                <img src="images/d5.jpg" alt="" class="doctor-image">
+                                <div class="overlay">
+                                    <h3>Op. Dr. Kerem Aslan</h3>
+                                    <button class="about-btn"onclick="openModal('modal5')">Hakkında</button>
+                                </div>
+                            </div>
+                            <div id="modal5" class="modal">
+                                <div class="modal-content">
+                                  <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+                                  <h2>Op. Dr. Kerem Aslan</h2>
+                                  <p><em>Çocuk Göz Sağlığı – Şaşılık Cerrahisi – Kornea</em></p>
+                                  
+                                  <p>Op. Dr. Kerem, göz hastalıkları alanında özellikle <strong>pediatrik oftalmoloji</strong>, <strong>şaşılık tedavisi</strong> ve <strong>kornea hastalıkları</strong> konularında uzmanlaşmış bir hekimdir.</p>
+                                  <p>Çocuk hastalarda erken tanı ve tedavi prensiplerini benimseyerek, şaşılık ve görme tembelliği gibi sorunların kalıcı hale gelmeden önüne geçmeyi hedeflemektedir.</p>
+                                  
+                                  <p>Kornea kaynaklı görme kusurlarının teşhisinde ileri düzey görüntüleme teknikleriyle çalışmaktadır.</p>
+                                  <p>Aynı zamanda lazer destekli düzeltici müdahalelerde yüksek başarı elde etmektedir.</p>
+                                  <p>Dinamik, yenilikçi ve teknolojiye hâkim yapısıyla hasta memnuniyetine büyük önem verir.</p>
+                                  <p>Çocuk hastalar ve aileleri tarafından sıkça tercih edilmektedir.</p>  
+                                </div>
+                              </div>
+                                <div class="doctor-card">
+                                    <img src="images/d6.jpg" alt="" class="doctor-image">
+                                    <div class="overlay">
+                                        <h3>Dr. Lucas Reinhart</h3>
+                                        <button class="about-btn"onclick="openModal('modal6')">Hakkında
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="modal6" class="modal">
+                                    <div class="modal-content">
+                                      <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+                                      <h2>Dr. Lucas Reinhart</h2>
+                                      <p><em>Lazer Göz Ameliyatları – Göz Estetiği – Kornea Tedavileri</em></p>
+                                      
+                                      <p>Dr. Lucas, özellikle <strong>lazer göz cerrahisi</strong>, <strong>göz estetiği</strong> ve <strong>kornea hastalıkları</strong> konularında uzmanlaşmış genç ve vizyoner bir hekimdir.</p>
+                                      <p>Modern lazer teknolojilerini kullanarak miyop, hipermetrop ve astigmat gibi kırma kusurlarının tedavisinde yüksek başarı oranlarına sahiptir.</p>
+                                      
+                                      <p>Göz estetiği alanında doğal görünüm ve işlevselliği bir arada sunan minimal invaziv uygulamalarıyla tanınmaktadır.</p>
+                                      <p>Kornea yüzey bozukluklarında ileri seviye analiz sistemleriyle hastalara özel planlamalar yapmaktadır.</p>
+                                      <p>Hasta iletişiminde son derece başarılı ve ilgili bir tutum sergileyen Dr. Lucas, her yaştan hastayla güçlü bir bağ kurmaktadır.</p>
+                                      <p>Teknoloji odaklı yaklaşımıyla hastanemizde yenilikçi tedavi anlayışını temsil etmektedir.</p>
+                                      
+                              
+                                    </div>
+                                  </div>
+                
+                    </div>
+                    </div>
+                </section>
+                
+                <section id="tedavilerimiz" class="tedavilerimiz">
+                    <h2>Tedavilerimiz</h2>
+                    <div class="tedavi-slider">
+                      
+                      <div class="tedavi-kart">
+                        <h3>Katarakt Ameliyatı</h3>
+                        <p>Katarakt, göz merceğinin saydamlığını kaybederek bulanık görmeye yol açtığı yaygın bir göz hastalığıdır. 
+                        Genellikle yaşlanmaya bağlı olarak ortaya çıksa da, diyabet, travma veya uzun süreli kortizon kullanımı gibi faktörlerle de gelişebilir. 
+                        Katarakt ilerledikçe kişinin günlük yaşamını olumsuz etkileyebilir.
+                        Tedavi, cerrahi yöntemle gerçekleştirilir. 
+                        Operasyonda saydamlığını yitirmiş doğal mercek çıkarılır, yerine  göz içi lens (IOL) yerleştirilir. 
+                        Modern katarakt ameliyatları genellikle dikişsiz, kısa sürede tamamlanan ve hasta konforunu ön planda tutan işlemlerdir. 
+                        Gelişmiş teknolojilerle kişiye özel lens seçenekleri sunularak, net görme imkanı sağlanabilir.</p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Lazer Göz Ameliyatı</h3>
+                        <p>Lazer göz ameliyatı, miyop, hipermetrop ve astigmat gibi kırma kusurlarını düzeltmek için uygulanan, yüksek teknoloji içeren bir tedavi yöntemidir. 
+                            LASIK, PRK ve No Touch Lazer gibi farklı teknikler sayesinde hastanın göz yapısına en uygun yöntem seçilebilir. 
+                            Lazer işlemiyle kornea şekillendirilerek ışığın retina üzerinde doğru şekilde odaklanması sağlanır.
+
+                            Bu tedavi, gözlük ve kontakt lens kullanımına alternatif olarak sunulur. 
+                            İşlem genellikle ağrısızdır ve sadece birkaç dakika sürer. Hastalar genellikle aynı gün evlerine döner, birkaç gün içinde net görmeye başlarlar. 
+                            Uygun adaylar için oldukça güvenli bir yöntemdir ancak detaylı göz muayenesi ile karar verilmelidir. </p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Retina Tedavileri</h3>
+                        <p> Retina, gözün arka kısmında yer alan ve görme işlevini gerçekleştiren ışığa duyarlı tabakadır. 
+                            Şeker hastalığına bağlı retinopati, sarı nokta hastalığı, retina yırtıkları ve dekolman gibi hastalıklar retina üzerinde ciddi hasarlar oluşturabilir. 
+                            Bu tür hastalıklar genellikle geç fark edilir ve ihmal edilirse kalıcı görme kaybına neden olabilir.
+
+                            Tedavi seçenekleri arasında anti-VEGF göz içi enjeksiyonlar, argon lazer uygulamaları ve retina cerrahisi (vitrektomi) yer alır. 
+                            Erken teşhis ve doğru tedavi planı, retina hastalıklarında görme kaybını durdurabilir veya yavaşlatabilir. 
+                            Özellikle diyabetik hastaların düzenli retina kontrolü yaptırmaları hayati öneme sahiptir.</p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Glokom (Göz Tansiyonu)</h3>
+                        <p> Glokom, göz içi basıncının yükselmesi sonucu görme sinirinin hasar görmesiyle oluşan, sinsi ilerleyen bir hastalıktır. 
+                            Başlangıçta belirti vermediği için “sessiz görme hırsızı” olarak adlandırılır. 
+                            Tedavi edilmediğinde kalıcı görme kaybına neden olabilir. 
+                            Erken teşhis, görme kaybının önlenmesinde kritik rol oynar.
+                            Tedavi; ilaçlar, lazer uygulamaları ve cerrahi müdahalelerle yapılabilir.
+                            Glokom tedavisinde en önemli unsur düzenli takip ve hasta uyumudur. 
+                            Modern tanı yöntemleri, optik sinir görüntülemeleri ve görme alanı testleriyle glokomun erken evrede tespiti mümkündür. 
+                            Multidisipliner bir yaklaşım ile bireyselleştirilmiş tedavi planları oluşturulmaktadır</p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Şaşılık Tedavisi</h3>
+                        <p>  Şaşılık, iki gözün aynı noktaya odaklanamaması durumudur. 
+                             Genellikle çocukluk döneminde ortaya çıkar ve erken müdahale ile kalıcı görme sorunlarının önüne geçilebilir.
+                             Yetişkinlerde ise estetik kaygılar dışında çift görme gibi şikayetler için de tedavi planlanabilir.
+                             Nedeni; göz kaslarında dengesizlik, sinir hasarı veya kırma kusurlarına bağlı olabilir.
+                             Tedavi edilmediğinde göz tembelliği gibi problemler gelişebilir.
+                             Tedaviye geç kalınmadan müdahale edilmesi, görme potansiyelinin korunmasında belirleyici rol oynar.
+                             Günümüzde gelişmiş cerrahi teknikler sayesinde  başarılı sonuçlar elde edilmektedir.
+                             Tedavi sonrası hasta takibi, göz kaslarının uyumu açısından önemlidir. 
+                        
+                             </p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Göz Estetiği</h3>
+                        <p> Göz estetiği; göz kapağı sarkması, torbalanması, gözyaşı kanalı tıkanıklıkları ve göz çevresindeki estetik sorunların tedavisini kapsayan cerrahi işlemleri içerir.
+                             Estetik kaygıların yanı sıra görme alanını etkileyen fonksiyonel sorunlar da bu alana girer. 
+                             Özellikle ileri yaşta göz kapağındaki düşüklük, görüşü kısıtlayabilir.
+
+                             Oküloplastik cerrahi, hem estetik hem fonksiyonel sonuçlar elde etmeyi hedefler.
+                             Göz kapağı ameliyatları, gözaltı torbalarının alınması, gözyaşı kanal operasyonları gibi çeşitli girişimler yapılabilir.
+                             Bu işlemler, uzman hekimlerce steril koşullarda ve lokal anestezi ile gerçekleştirilebilir.
+                             Ameliyat sonrası iyileşme süreci genellikle hızlıdır. </p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Kornea Tedavisi</h3>
+                        <p> Kornea, gözün dış tabakasında yer alan saydam yapıdır ve ışığın kırılarak retina üzerine düşmesini sağlar. 
+                            Keratokonus, korneanın incelerek koni şekli almasıyla gelişen ilerleyici bir hastalıktır. 
+                            Bu durum, ciddi görme bozukluklarına neden olabilir ve erken evrede saptanmazsa gözlük veya lensle düzeltilemeyen seviyelere ulaşabilir.
+
+                            Tedavi seçenekleri hastalığın evresine göre değişir. 
+                            Başlangıç düzeyinde “kornea içi halka” ve “çapraz bağlama (crosslinking)” tedavisi uygulanabilirken, ileri evrelerde kornea nakli gerekebilir.
+                            Tedavi süreci, hastanın yaşına, görme seviyesine ve kornea yapısına göre planlanır. 
+                            Erken tanı, tedavi başarısını önemli ölçüde artırır. </p>
+                      </div>
+                
+                      <div class="tedavi-kart">
+                        <h3>Çocuk Göz Sağlığı</h3>
+                        <p>Çocuklarda göz sağlığı, yaşam boyu kalıcı görme yetisinin temelini oluşturur. 
+                            Özellikle 0–7 yaş aralığı, göz gelişimi açısından kritik bir dönemdir. 
+                            Göz tembelliği, şaşılık, kırma kusurları ve doğumsal problemler bu dönemde saptanmalı ve tedavi edilmelidir.
+                            Ebeveynlerin düzenli göz kontrolünü ihmal etmemesi büyük önem taşır.
+
+                            Tedavi yöntemleri arasında gözlük kullanımı, kapama tedavisi (güçlü gözün kapatılması), ortoptik egzersizler ve gerektiğinde cerrahi müdahale bulunur. 
+                            Çocuklarda görme bozukluklarının erken fark edilmesi, ileride oluşabilecek kalıcı kayıpların önüne geçer. 
+                            Göz sağlığı takibi, akademik başarı ve yaşam kalitesi açısından da doğrudan etkilidir. </p>
+                      </div>
+                
+                    </div>
+                  </section>
+                
+                </body>
+                </html>
+                
+                <section id="tdv" class="tdv-section">
+                    <h2>Sıkça Sorulan Sorular</h2>
+                    <div class="tdv-container">
+                        <div class="tdv-item">
+                            <button class="tdv-question">Katarakt ameliyatı ağrılı bir işlem midir?</button>
+                            <div class="tdv-answer">
+                                <p>Katarakt ameliyatı genellikle ağrısızdır. Lokal anestezi uygulanır ve işlem sırasında hasta herhangi bir rahatsızlık hissetmez.</p>
+                            </div>
+                        </div>
+                        <div class="tdv-item">
+                            <button class="tdv-question">Lazer göz ameliyatı kimler için uygundur?</button>
+                            <div class="tdv-answer">
+                                <p>Lazer göz ameliyatı, 18 yaşını geçmiş, göz numarası sabitlenmiş ve göz yapısı uygun olan kişiler için uygundur. Detaylı bir göz muayenesi ile uygunluk değerlendirilir.</p>
+                            </div>
+                        </div>
+                        <div class="tdv-item">
+                            <button class="tdv-question">Glokom tedavisi tamamen iyileşme sağlar mı?</button>
+                            <div class="tdv-answer">
+                                <p>Glokom tedavisi, hastalığın ilerlemesini durdurmayı hedefler. Ancak mevcut görme kaybını geri getirmek mümkün değildir. Erken teşhis ve düzenli takip önemlidir.</p>
+                            </div>
+                        </div>
+                        <div class="tdv-item">
+                            <button class="tdv-question">Retina hastalıkları nasıl tedavi edilir?</button>
+                            <div class="tdv-answer">
+                                <p>Retina hastalıklarının tedavisi, hastalığın türüne bağlıdır. Anti-VEGF enjeksiyonlar, lazer tedavileri veya cerrahi müdahaleler uygulanabilir.</p>
+                            </div>
+                        </div>
+                        <div class="tdv-item">
+                            <button class="tdv-question">Şaşılık tedavisi için en uygun yaş nedir?</button>
+                            <div class="tdv-answer">
+                                <p>Şaşılık tedavisi için erken yaşta müdahale önemlidir. Çocukluk döneminde yapılan tedaviler, kalıcı görme sorunlarının önüne geçebilir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>               
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        </section>
+
+        <section id="contact" ></section>
+        <div class="info-container">
+            <div class="contact-info">
+              <h2>İletişim</h2>
+              <p><i class="p1"></i>Daha sağlıklı bir hayat için bize ulaşın...</p>
+              <p><i class="fas fa-phone-alt"></i> +90 555 123 45 67</p>
+              <p><i class="fas fa-envelope"></i> info@mercangoz.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye </p>
+            </div>
+            <div class="calisma-info">
+                <h3>Çalışma Saatleri</h3>
+                <div class="saat-satiri"><span class="gun">Pazartesi</span><span class="saat">8:30 - 17:30</span></div>
+                <div class="saat-satiri"><span class="gun">Salı</span><span class="saat">8:30 - 17:30</span></div>
+                <div class="saat-satiri"><span class="gun">Çarşamba</span><span class="saat">8:30 - 17:30</span></div>
+                <div class="saat-satiri"><span class="gun">Perşembe</span><span class="saat">8:30 - 17:30</span></div>
+                <div class="saat-satiri"><span class="gun">Cuma</span><span class="saat">8:30 - 17:30</span></div>
+                <div class="saat-satiri"><span class="gun">Cumartesi</span><span class="saat">8:30 - 17:30</span></div>
+              </div>   
+          </div> 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Doktorlar</title>
+  <style>
+    .doctor-card {
+      position: relative;
+      width: 200px;
+    }
+    .doctor-image {
+      width: 100%;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+    .about {
+      margin-top: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.carousel-images').slick({
+            slidesToShow: 1,   
+            slidesToScroll: 1, 
+            prevArrow: $('.carousel-btn.left'), 
+            nextArrow: $('.carousel-btn.right'), 
+            autoplay: false,   
+            autoplaySpeed: 2000, 
+            dots: true      
+        });
+    });
+    </script>
+    <script>
+        document.querySelectorAll('.tdv-question').forEach((button) => {
+          button.addEventListener('click', () => {
+            const tdvItem = button.parentElement;
+            const isActive = tdvItem.classList.contains('active');
+      
+            document.querySelectorAll('.tdv-item').forEach((item) => {
+              item.classList.remove('active');
+            });
+      
+            if (!isActive) {
+              tdvItem.classList.add('active');
+            }
+          });
+        });
+      </script>
+    </body>
+  </html>

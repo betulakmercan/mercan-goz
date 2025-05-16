@@ -15,10 +15,19 @@
         <h2>Randevu Al</h2>
         <div class="form-container">
             <form id="randevuForm">
-                <input type="text" id="name" placeholder="Ad Soyad" required>
-                <input type="date" id="dob" placeholder="Doğum Tarihi" required>
-                <input type="text" id="no" placeholder="T.C Kimlik No" required>
-                <input type="tel" id="phone" placeholder="Telefon Numarası" required>
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="name" placeholder="Ad Soyad" required>
+        
+                <label for="date">Randevu Tarihi:</label>
+                <input type="date" id="date" name="date" placeholder="Randevu Tarihi" required>
+        
+                <label for="no">T.C Kimlik No:</label>
+                <input type="text" id="no" name="no" placeholder="T.C Kimlik No" required>
+        
+                <label for="phone">Telefon Numarası:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telefon Numarası" required>
+        
+                <label for="hour">Randevu Saati:</label>
                 <select id="hour" name="hour" required>
                     <option value="" disabled selected>Randevu Saati Seçiniz</option>
                     <option value="09:00">09:00</option>
@@ -27,20 +36,22 @@
                     <option value="13:00">13:00</option>
                     <option value="14:00">14:00</option>
                     <option value="15:00">15:00</option>
-                    <option value="15:00">16:00</option>
-                    <option value="15:00">17:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
                 </select>
-                <select id="doctorId" name="doctor" required>
+        
+                <label for="doctorId">Doktor Seçiniz:</label>
+                <select id="doctorId" name="doctorId" required>
                     <option value="" disabled selected>Doktor seçiniz</option>
-                    <option value="Dr. Elif Yılmaz">Uzm. Dr. Elif Yılmaz</option>
-                    <option value="Dr. Mehmet Derman">Dr. Öğr. Üyesi Mehmet Derman</option>
-                    <option value="Dr. Zeynep Akar">Op. Dr. Kerem Aslan</option>
-                    <option value="Dr. Lucas Reinhart">Dr. Lucas Reinhart</option>
-                    <option value="Doç. Dr. Zeynep Akar">Doç. Dr. Zeynep Akar</option>
-                    <option value="Prof. Dr. Ahmet Gürsoy">Prof. Dr. Ahmet Gürsoy</option>
+                    <option value="1">Uzm. Dr. Elif Yılmaz</option>
+                    <option value="2">Dr. Öğr. Üyesi Mehmet Derman</option>
+                    <option value="3">Op. Dr. Kerem Aslan</option>
+                    <option value="4">Dr. Lucas Reinhart</option>
+                    <option value="5">Doç. Dr. Zeynep Akar</option>
+                    <option value="6">Prof. Dr. Ahmet Gürsoy</option>
                 </select>
-    
-                <button type="submit">Randevu Al</button>
-            </form>
-        </div>
-    </section>
+                
+        <button type="submit">Randevu Al</button>
+    </form>
+</div>
+        

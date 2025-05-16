@@ -3,18 +3,14 @@ from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 from urllib.parse import quote_plus
 from flask import Flask, jsonify, request
 
-
-# Flask uygulaması
+Base = declarative_base()
 app = Flask(__name__)
 
-# Veritabanı bağlantısı
 password = quote_plus("betul24")
 SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://betul:{password}@localhost:3306/project1"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
 
-# Doktor tablosu
 class Doktor(Base):
     __tablename__ = "doktor"
     id = Column(Integer, primary_key=True, index=True)
@@ -23,8 +19,6 @@ class Doktor(Base):
     uzmanlik_alani = Column(String(100), nullable=False)
 
     randevular = relationship("Randevu", back_populates="doktor")
-
-# Randevu tablosu
 class Randevu(Base):
     __tablename__ = "randevu"
     id = Column(Integer, primary_key=True, index=True)
@@ -36,30 +30,25 @@ class Randevu(Base):
 
     doktor = relationship("Doktor", back_populates="randevular")
 
-# FilmCekim tablosu
 class FilmCekim(Base):
     __tablename__ = "filmcekimler"
     id = Column(Integer, primary_key=True, index=True)
     randevu_id = Column(Integer, ForeignKey("randevu.id", ondelete="CASCADE"), nullable=False)
     film_tipi = Column(String(50), nullable=False)
 
-# Sonuc tablosu
 class Sonuc(Base):
     __tablename__ = "sonuclar"
     id = Column(Integer, primary_key=True, index=True)
     film_id = Column(Integer, ForeignKey("filmcekimler.id"))
     sonuc_yorumu = Column(String(50), nullable=False)
 
-# Tabloları oluşturma
 def create_tables():
     try:
-        Base.metadata.drop_all(bind=engine)  # Mevcut tabloları sil
         Base.metadata.create_all(bind=engine)
-        print("Tablolar yeniden oluşturuldu!")
+        print("Tablolar oluşturuldu!")
     except Exception as e:
         print(f"Tablo oluşturma hatası: {e}")
-
-# Veritabanı bağlantısını kontrol etme
+#veritabanı bağlantısı
 def check_database_connection():
     try:
         connection = engine.connect()
@@ -68,7 +57,7 @@ def check_database_connection():
     except Exception as e:
         print(f"Veritabanı bağlantı hatası: {e}")
 
-# Doktor ekleme
+
 def add_doktor(ad, soyad, uzmanlik_alani):
     db = SessionLocal()
     try:
@@ -90,13 +79,20 @@ def add_doktor(ad, soyad, uzmanlik_alani):
     finally:
         db.close()
 
-# Randevu ekleme
+
 def add_randevu(doktor_id, hasta_ad, hasta_soyad, tarih, durum):
     db = SessionLocal()
     try:
-        mevcut_doktor = db.query(Doktor).filter(Doktor.id == doktor_id).first()
-        if not mevcut_doktor:
-            print(f"Hata: Doktor ID {doktor_id} mevcut değil!")
+        # Aynı randevunun zaten mevcut olup olmadığını kontrol et
+        mevcut_randevu = db.query(Randevu).filter(
+            Randevu.doktor_id == doktor_id,
+            Randevu.hasta_ad == hasta_ad,
+            Randevu.hasta_soyad == hasta_soyad,
+            Randevu.tarih == tarih
+        ).first()
+
+        if mevcut_randevu:
+            print(f"Randevu zaten mevcut: {mevcut_randevu.hasta_ad} {mevcut_randevu.hasta_soyad}, Tarih: {mevcut_randevu.tarih}")
             return
 
         yeni_randevu = Randevu(
@@ -114,7 +110,7 @@ def add_randevu(doktor_id, hasta_ad, hasta_soyad, tarih, durum):
     finally:
         db.close()
 
-# Tüm doktorları listeleme
+
 def get_all_doktor():
     db = SessionLocal()
     try:
@@ -126,51 +122,6 @@ def get_all_doktor():
     finally:
         db.close()
 
-# Tüm randevuları listeleme
-def get_all_randevu():
-    db = SessionLocal()
-    try:
-        randevular = db.query(Randevu).all()
-        for randevu in randevular:
-            print(f"ID: {randevu.id}, Hasta: {randevu.hasta_ad} {randevu.hasta_soyad}, Tarih: {randevu.tarih}, Durum: {randevu.durum}")
-    except Exception as e:
-        print(f"Randevuları listeleme hatası: {e}")
-    finally:
-        db.close()
-
-# Ana çalışma bloğu
-if __name__ == "__main__":
-    check_database_connection()
-    create_tables()
-
-    # Veri ekleme
-    add_doktor("Ahmet", "Yılmaz", "Kardiyoloji")
-    add_doktor("Ayşe", "Demir", "Göz Hastalıkları")
-
-    print("\n--- Doktor Tablosu ---")
-    get_all_doktor()
-
-    add_randevu(1, "Betül", "Kaya", "2025-04-28", "Onaylandı")
-    add_randevu(2, "Ali", "Yıldız", "2025-04-29", "Beklemede")
-
-    print("\n--- Randevu Tablosu ---")
-    get_all_randevu()
-
-    app.run(debug=False)
-
-    
-    # Randevu ekleme
-    check_database_connection()
-    create_tables()
-
-    print("\n--- Randevu Tablosu ---")
-    get_all_randevu()  # Tüm randevuları terminale yazdırır
-
-    app.run(debug=False)
-
-
-
-# Randevunun sisteme düşmesi
 @app.route('/api/randevular', methods=['GET'])
 def get_randevular():
     db = SessionLocal()
@@ -192,10 +143,6 @@ def get_randevular():
         return jsonify({"error": f"Randevuları listeleme hatası: {str(e)}"}), 500
     finally:
         db.close()
-        {
-    "message": "Randevu başarıyla eklendi!"
-        }
-
 
 @app.route('/randevu-ekle', methods=['POST'])
 def randevu_ekle():
@@ -204,27 +151,48 @@ def randevu_ekle():
     hasta_ad = data.get('hasta_ad')
     hasta_soyad = data.get('hasta_soyad')
     tarih = data.get('tarih')
-    durum = data.get('durum', 'Beklemede')  # Varsayılan durum "Beklemede"
-    print(f"Gelen veri: {data}")  # Gelen veriyi terminalde yazdır
+    durum = data.get('durum', 'Beklemede')
 
     if not doktor_id or not hasta_ad or not hasta_soyad or not tarih:
         return jsonify({"error": "Eksik bilgi. Lütfen tüm alanları doldurun."}), 400
 
     try:
-        # Randevu ekleme
         add_randevu(doktor_id, hasta_ad, hasta_soyad, tarih, durum)
         return jsonify({"message": "Randevu başarıyla eklendi!"}), 201
     except Exception as e:
         return jsonify({"error": f"Randevu ekleme hatası: {str(e)}"}), 500
 
-def recreate_tables():
+def get_all_randevu():
+    db = SessionLocal()
     try:
-        Base.metadata.drop_all(bind=engine)  # Mevcut tabloları sil
-        Base.metadata.create_all(bind=engine)  # Tabloları yeniden oluştur
-        print("Tablolar yeniden oluşturuldu!")
+        randevular = db.query(Randevu).all()
+        for randevu in randevular:
+            print(f"ID: {randevu.id}, Doktor ID: {randevu.doktor_id}, Hasta: {randevu.hasta_ad} {randevu.hasta_soyad}, Tarih: {randevu.tarih}, Durum: {randevu.durum}")
     except Exception as e:
-        print(f"Tablo yeniden oluşturma hatası: {e}")
-    
+        print(f"Randevuları listeleme hatası: {e}")
+    finally:
+        db.close()
 
 if __name__ == "__main__":
- app.run(debug=False)
+    check_database_connection()
+    create_tables()
+
+    if not SessionLocal().query(Doktor).first():
+        add_doktor("Prof. Dr. Ahmet", "Gürsoy", "Katarakt Cerrahisi")
+        add_doktor("Doç. Dr. Zeynep", "Akar", "Retina Hastalıkları")
+        add_doktor("Dr. Öğr. Üyesi Mehmet", "Derman", "Glokom-Katarakt Cerrahisi")
+
+    if not SessionLocal().query(Randevu).first():
+        add_randevu(1, "Ece", "Demir", "2025-04-28", "Onaylandı")
+        add_randevu(2, "Ali", "Yıldız", "2025-08-22", "Beklemede")
+        add_randevu(3, "Betül", "Akmercan", "2025-05-03", "Sonuçlandı")
+
+    print("\n--- Doktor Tablosu ---")
+    get_all_doktor()
+
+    print("\n--- Randevu Tablosu ---")
+    get_all_randevu()
+
+    app.run(debug=False)
+
+

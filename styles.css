@@ -493,46 +493,38 @@ doctor-card button {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    transition: opacity 0.5s ease;
     opacity: 0;
-  }
-  .modal.show {
-    display: flex; /* Görünür hale getir */
-    opacity: 1; /* Görünürlük */
-    visibility: visible; 
-}
-  
-.modal-content {
-  background-color: rgba(0, 0, 0, 0.8); /* Siyah şeffaf arka plan */
-  color: white;
-  padding: 20px; /* Daha küçük bir padding */
-  border-radius: 10px;
-  width: 600px; /* Daha geniş bir modal */
-  text-align: justify; /* Paragrafları hizala */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  transform: scale(0.9); /* Küçük başlat */
-  transition: transform 0.3s ease; /* Geçiş süresi ve türü */
-  margin: 10px auto; /* Ortalamak için */
-  line-height: 1.6; /* Satır yüksekliği */
+    transition: opacity 0.5s ease;
 }
 
-.modal-content p {
-  margin: 10px 0; /* Paragraflar arasında boşluk */
-  line-height: 1.8; /* Daha okunabilir satır yüksekliği */
+.modal.show {
+    display: flex; /* Görünür hale getir */
+    opacity: 1; /* Görünürlük */
 }
-  .modal.show .modal-content {
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8); /* Siyah şeffaf arka plan */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9); /* Küçük başlat */
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
     transform: scale(1); /* Normal boyuta büyüt */
 }
-  
-  .close-btn {
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 20px;
     font-size: 24px;
     cursor: pointer;
-  }
-
+}
 
 /* Randevu Formu */
 .form-container {
